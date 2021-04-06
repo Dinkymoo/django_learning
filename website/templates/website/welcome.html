@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Welcome</title>
-	<link rel="stylesheet" href="/static/website/style.css">
-
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+{% block title %} Welcome {% endblock %}
 <h1>Meetings</h1>
 <ul>
 	{% for meeting in meetings %}
@@ -16,5 +10,4 @@
 	{% endfor %}
 	<li><a href="{% url 'rooms' %}">Rooms</a>
 </ul>
-</body>
-</html>
+{% endblock %}
