@@ -1,8 +1,9 @@
 from django.urls import path
 
-from meetings.views import detail, rooms_list
+from meetings.views import detail, rooms_list, new
 
 urlpatterns = [
         path('<int:id>', detail, name="meetings_detail"),
-        path('rooms', rooms_list, name="rooms")
+        path('rooms', rooms_list, name="rooms"),
+        path('new', new, name="new")
 ]
