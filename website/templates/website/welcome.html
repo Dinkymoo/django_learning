@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome</title>
+
+</head>
+<body>
+<h1>Meetings</h1>
+<ul>
+	{% for meeting in meetings %}
+	<li><a href="{% url 'meetings_detail' meeting.id %}">{{meeting.title}}</a>
+
+	</li>
+	{% endfor %}
+	<li><a href="{% url 'rooms' %}">Rooms</a>
+</ul>
+</body>
+</html>

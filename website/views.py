@@ -1,10 +1,11 @@
 from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
+from meetings.models import Meeting
 
 
 def welcome(request):
-    return HttpResponse('Welcome')
+    return render(request, 'website/welcome.html', {'meetings': Meeting.objects.all()})
 
 
 def date(request):

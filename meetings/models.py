@@ -1,5 +1,6 @@
-from django.db import models
 from datetime import time
+
+from django.db import models
 
 
 class Room(models.Model):
@@ -11,7 +12,6 @@ class Room(models.Model):
         return f"{self.name} floor {self.floor} room_number {self.room_number}"
 
 
-# Create your models here.
 class Meeting(models.Model):
     title = models.CharField(max_length=200)
     date = models.DateField()
